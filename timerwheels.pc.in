@@ -1,0 +1,7 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+includedir=${prefix}/include
+
+Name: @PROJECT_NAME@
+Description: A C++14 atomic timer wheel library.
+Version: @PROJECT_VERSION@
+Cflags:  -I${includedir}
