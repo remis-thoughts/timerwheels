@@ -1,6 +1,8 @@
 cmake_minimum_required (VERSION 3.1.0 FATAL_ERROR)
 project (timerwheels-tests)
 
+set(CMAKE_BUILD_TYPE Debug)
+
 include_directories("${PROJECT_SOURCE_DIR}/../include")
 link_directories("${PROJECT_SOURCE_DIR}/..")
 
