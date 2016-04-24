@@ -1,4 +1,6 @@
 timerwheels.pc
+man
+doxygen.conf
 
 CMakeCache.txt
 CMakeFiles

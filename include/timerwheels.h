@@ -86,6 +86,13 @@ namespace timerwheels {
 	public:
 		FixedRangeTimerWheel() : last_tick(CLOCK::now()), index(0), unscheduled(nullptr), wheel {} {}
 
+		/**
+		 * @brief Add a function to be called after a specified delay.
+		 * 
+		 * @param fire The function to call; always executed on the thread calling `tick()`.
+		 * @param when The initial delay before calling the function.
+		 * @param repeat If non-zero, the function will be rescheduled immediately after firing after this delay.
+		 */
 		void schedule(std::function<void()> fire, DURATION when, DURATION repeat = DURATION::zero()) {
 			queue(
 				new Timer(std::move(fire), std::move(repeat), std::move(when)),
